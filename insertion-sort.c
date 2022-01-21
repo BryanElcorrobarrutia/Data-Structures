@@ -2,7 +2,7 @@
 
 
 /**
- * Sorts an array of integers in-place with O(n^2) runtime complexity.
+ * Sorts an array of integers in-place with a non-decreasing order. O(n^2) runtime complexity.
  * 
  * @param[in, out] A the array of integers to be sorted.
  * @param[in] size the size of the array of integers A.  
@@ -16,6 +16,7 @@ void insertion_sort(int * A, int size){
 		int val = A[j];
 		int i = j - 1;
 
+		// if you want to sort in a non-increasing order change the inequality in A[i] > val to A[i] < val. 
 		while ((i >= 0) && (A[i] >  val)){
 			A[i+1] = A[i];
 			i = i - 1;
