@@ -9,7 +9,6 @@
  * @param[in] size the length of both input arrays. 
  * @param[out] result the array of integers of size size + 1 that is the binary sum of A and B.
  */
-
 void add_binary(int * A, int * B, int size, int * result){
 
     int carry = 0;
