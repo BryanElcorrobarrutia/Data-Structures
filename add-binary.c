@@ -2,7 +2,7 @@
 
 
 /**
- * Adds two binary strings of the same length and returns the result. 
+ * Adds two binary strings of the same length and writes the result. 
  * 
  * @param[in] A an array of integers representing one of the binary strings.
  * @param[in] B an array of integers representing one the other binary string.
