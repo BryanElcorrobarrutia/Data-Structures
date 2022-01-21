@@ -1,11 +1,16 @@
 #include <stdio.h>
 
 
+/**
+ * Sorts an array of integers in-place with O(n^2) runtime complexity.
+ * 
+ * @param[in, out] A the array of integers to be sorted.
+ * @param[in] size the size of the array of integers A.  
+ *
+ * @returns nothing. The array was sorted in-place. 
+ */
 
 void insertion_sort(int * A, int size){
-	// returns a permutation of the given array with elements in a non-decreasing order.
-	// assumes an array with size >= 2.
-
 	for (int j = 1; j < size; j++){
 
 		int val = A[j];
@@ -21,8 +26,15 @@ void insertion_sort(int * A, int size){
 
 }
 
+#define TEST // undefine this if u don't want to test it in main directly.
 
+
+#ifdef TEST
+
+
+/// Sorts a small array of 4 integers and prints the values of the sorted array.
 int main (){
+
 	int A[4] = {5,2,1,10};
 
 	int size = sizeof(A) / sizeof(int);
@@ -36,3 +48,4 @@ int main (){
 
 }
 
+#endif
