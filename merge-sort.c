@@ -5,7 +5,7 @@
 #include <math.h>
 
 /**
- * Merges two contiguous sorted (non-decreasing) subarrays of the given array into a single sorted subarray.
+ * Merges two adjacent sorted (non-decreasing) subarrays of the given array into a single sorted subarray.
  * Has a O(n) runtime complexity. 
  * 
  * @param[in, out] A the array of integers where the two sorted subarrays are combined.
