@@ -2,7 +2,7 @@
 
 
 /**
- * Sorts an array of integers in-place with a non-decreasing order. O(n^2) runtime complexity.
+ * Sorts an array of integers in-place with a non-decreasing order. Has a worst case O(n^2) runtime complexity.
  * 
  * @param[in, out] A the array of integers to be sorted.
  * @param[in] size the size of the array of integers A.  
