@@ -1,4 +1,5 @@
 /** Classic divide and conquer algorithm for sorting arrays of numbers.
+ * NOTE: in order to compile this file you need to add the -lm flag to gcc to link the math functions from math.h. 
  */
 #include <stdio.h>
 #include <limits.h>
