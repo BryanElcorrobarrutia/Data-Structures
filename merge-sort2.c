@@ -1,12 +1,10 @@
 /** Classic divide and conquer algorithm for sorting arrays of numbers.
  * NOTE: in order to compile this file you need to add the -lm flag to gcc to link the math functions from math.h. 
  * 
- * glossary
- * 
- * sentinel: (Described in CLRS Chapter 2.3) 
+ * This version of merge sort does not use a sentinel (Described in CLRS Chapter 2.3) to merge the subarrays. 
+ * Don't need to include <limits.h>
  */
 #include <stdio.h>
-#include <limits.h>
 #include <math.h>
 
 /**
@@ -30,25 +28,26 @@ void merge(int *A, int f, int m, int l){
 	int n_2 =   l - m; 
 
 	// copy the first subarray into a new array L.
-	int L[n_1 + 1];
+	int L[n_1];
 	for (int i = 0; i < n_1; i++){
 		L[i] = A[i + f];
 
 	}
-	L[n_1] = INT_MAX; // sentinel to stop incrementing i.
 
 	// copy the second subarray into new array R.
-	int R[n_2 + 1];
+	int R[n_2];
 	for (int i = 0; i < n_2; i++){
 		R[i] = A[i + m + 1];
 	}	
-	R[n_2] = INT_MAX; // sentinel to stop incrementing j.
 
 	int i = 0;
 	int j = 0;
 
+
 	// merging the two sub arrays into a single sorted array into A[f,..,l]
-	for (int a = f; a <= l; a++){
+
+	int a = f;
+	while (a <= l){
 
 		if (L[i] <= R[j]){
 			A[a] = L[i];
@@ -57,6 +56,30 @@ void merge(int *A, int f, int m, int l){
 		else{
 			A[a] = R[j];
 			j = j + 1;
+		}
+
+
+		a = a + 1;
+
+		if ((i == n_1) || (j == n_2)){	
+			break; // Placed one of the subarrays entirely onto A, exit to place the rest.
+		}
+	}
+
+
+	// Place the rest of the sorted subarray onto A. 
+	if (i == n_1){ // If the left subarray was emptied, place rest of right subarray into A.
+		while (a <= l){
+			A[a] = R[j];
+			j = j + 1;
+			a = a + 1; 
+		}
+	}
+	else if (j == n_2){ // If the right subarray was emptied, place rest of left subarray into A.
+		while (a <= l){
+			A[a] = L[i];
+			i = i + 1;
+			a = a + 1; 
 		}
 	}
 }
