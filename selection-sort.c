@@ -1,4 +1,4 @@
-/** This algorithm is worst than insertion sort since its order of growth remains O(n^2) 
+/** This algorithm is worse than insertion sort since its order of growth remains O(n^2) 
  * in the worst and best case. At least insertion sort in the best case is O(n). 
  */
 
