@@ -52,7 +52,7 @@ void insertion_sort(int * A, int l){
 #ifdef TEST
 
 
-/// Sorts a small array of 4 integers and prints the values of the sorted array.
+/// Sorts a small array of 10 integers and prints the values of the sorted array.
 int main (){
 
 	int A[10] = {5,2,-10,10, -2, 16, 12,4,42,1};
