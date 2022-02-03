@@ -1,5 +1,5 @@
 /** Naive implementation of the fibbonaci sequence. Takes more than a second on my 
- * computer for n >= 40. It has a O(2^n) any-case runtime complexity. Very slow,
+ * computer for n >= 40. It has a O(2^n) any-case runtime complexity. Very slow.
  */
 
 
